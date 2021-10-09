@@ -1,17 +1,26 @@
 pipeline {
     agent any
     stages {
+        stage('Check') {
+            steps {
+                sh 'printenv'
+                sh 'java -version'
+                sh 'git --version'
+                sh 'docker version'
+                sh 'mvn -v'
+            }
+        }
         stage('Build') {
             steps {
                 //
-               echo "building"
+                echo "building"
             }
         }
         stage('Test') {
             steps {
                 //
                echo "testing"
-               emailext body: 'test', subject: '', to: '184505943@qq.com'
+               //emailext body: 'test', subject: '', to: '184505943@qq.com'
             }
         }
         stage('Deploy') {
