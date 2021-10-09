@@ -11,6 +11,7 @@ pipeline {
             steps {
                 //
                echo "testing"
+               emailext body: 'test', subject: '', to: '184505943@qq.com'
             }
         }
         stage('Deploy') {
