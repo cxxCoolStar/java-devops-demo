@@ -8,6 +8,7 @@ pipeline {
                 sh 'git --version'
                 sh 'docker version'
                 sh 'mvn -v'
+                sh '666'
             }
         }
         stage('Build') {
