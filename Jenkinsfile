@@ -1,3 +1,7 @@
+pipeline{
+
+    agent any
+
     stages {
         //流水线的所以阶段
         //1、编译"abc"
@@ -28,3 +32,4 @@
             }
         }
     }
+}
